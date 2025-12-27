@@ -6,13 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-
-    <form method="POST">
-        <h2>Student Form</h2>
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Add">
-
-    </form>
+    <ul>
+        {% for student in students %}
+        <li>
+            <a href="/detail/{{student.id}}">{{student.first_name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
