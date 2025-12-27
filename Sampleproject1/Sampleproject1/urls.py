@@ -1,5 +1,5 @@
 """
-URL configuration for ModelFormProject project.
+URL configuration for Sampleproject1 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,13 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.form_view,name="form_view"),
-    path('list/', views.stu_list_view,name="stu_list_view"),
-    path('detail/<int:id>',views.stu_detail_view,name="stu_detail_view"),
-    path('update/<int:id>',views.stu_update_view,name = "stu_update_view"),
-    path('delete/<int:id>',views.stu_delete_view,name = "stu_delete_view"),
 ]
