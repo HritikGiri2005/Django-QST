@@ -23,3 +23,22 @@ def stu_detail_view(request,id):
     student = Student.objects.get(id=id)
     return render(request,'testapp/Studentdetail.html',{'student':student})
 
+def stu_update_view(request,id):
+    student = Student.objects.get(id=id)
+    form = StudentForm(instance = student)
+
+    if request.method == 'POST':
+        form = StudentForm(request.POST,instance = student)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/list")
+    
+    return render(request,"testapp/update_student.html",{"form":form})
+
+def stu_delete_view(request,id):
+    student = Student.objects.get(id=id)
+    if request.method =="POST":
+        student.delete()
+        return HttpResponseRedirect("/list")
+    return render(request,"testapp/delete_student.html",{"student":student})
+
