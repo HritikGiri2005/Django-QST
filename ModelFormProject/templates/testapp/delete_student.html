@@ -7,11 +7,13 @@
 </head>
 <body>
     <h2>Are you sure you want to delete <u>detail/</u>?</h2>
+
     <form action="" method="post">
         {{form.as_p}}
         {% csrf_token %}
-        <button> <a href="/list">confirm delete</a> </button>
-        <button> <a href="/list">No</a> </button>
+        <input type="submit" value="Delete">
     </form>
+
+    <a href="/list">Go back</a>
 </body>
 </html>
