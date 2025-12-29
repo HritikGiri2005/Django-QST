@@ -20,7 +20,5 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('reg/',views.register),
-    path('',views.success)
-
+    path('',views.register),
 ]
