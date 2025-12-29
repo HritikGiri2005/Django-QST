@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def register(request):
     return render(request,'testapp/register.html')
+
+def success(request):
+    return render(request,'testapp/success.html')
