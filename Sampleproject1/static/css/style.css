@@ -1,0 +1,14 @@
+.table {
+    width: 100%;
+}
+
+.row-space {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.row-space th {
+    text-align: center;
+}
+
