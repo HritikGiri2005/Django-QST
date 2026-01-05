@@ -7,12 +7,12 @@ from .forms import UserProfileForm
 
 def register(request):
     if request.method == 'POST':
-        form = UserProfile(request.POST)
+        form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("")
+            return HttpResponseRedirect("/")
     else:
-        form = UserProfile()
+        form = UserProfileForm()
     return render(request,'testapp/register.html',{'form':form})
 
 def success(request):
