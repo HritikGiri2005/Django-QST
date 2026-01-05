@@ -20,5 +20,5 @@ def success(request):
     return render(request, 'testapp/success.html', {'users': users})
 
 def profileview(request):
-    view = UserProfile.objects.all()
+    view = UserProfile.objects.all().get(id=id)
     return render(request,'testapp/view.html',{view:'view'})
