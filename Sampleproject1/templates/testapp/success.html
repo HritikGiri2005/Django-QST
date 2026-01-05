@@ -16,7 +16,7 @@
     <form>
         {% csrf_token %}
         {{form.as_p}}
-        <input type="button" value="Add User Profile" class = 'btn btn-warning'>
+        <button class="btn btn-warning"><a href="/register" style = "color: black; text-decoration:none">Add User Profile</a></button>
         <table class="table">
                 <tr class="row-space">
                     <th>Pic</th>
