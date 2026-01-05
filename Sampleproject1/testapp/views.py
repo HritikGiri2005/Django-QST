@@ -1,12 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect
 from .models import UserProfile
-from .forms import UserProfile
+from .forms import UserProfileForm
+
 
 # Create your views here.
 
 def register(request):
-    form = UserProfile()
-    return render(request, 'testapp/register.html', {'form': form})
+    if request.method == 'POST':
+        form = UserProfile(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("")
+    else:
+        form = UserProfile()
+    return render(request,'testapp/register.html',{'form':form})
 
 def success(request):
-    return render(request,'testapp/success.html')
+    users = UserProfile.objects.all()
+    return render(request, 'testapp/success.html', {'users': users})
