@@ -18,3 +18,7 @@ def register(request):
 def success(request):
     users = UserProfile.objects.all()
     return render(request, 'testapp/success.html', {'users': users})
+
+def profileview(request):
+    view = UserProfile.objects.all()
+    return render(request,'testapp/view.html',{view:'view'})
