@@ -1,7 +1,7 @@
 from django import forms
 from .models import UserProfile
 
-class UserProfileForm(forms.ModelForm):
+class UserProfile(forms.ModelForm):
 
     GENDER_CHOICES = [
         ('Male', 'Male'),
