@@ -26,6 +26,7 @@ urlpatterns = [
     path('',views.success),
     path('profileview/<int:id>',views.profileview,name='profileview'),
     path('deleteview/<int:id>',views.deleteview,name='deleteview'),
+    path('updateview/<int:id>',views.updateview,name="updateview")
     ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
