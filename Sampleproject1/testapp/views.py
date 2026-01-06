@@ -28,5 +28,5 @@ def deleteview(request,id):
     if request.method == 'POST':
         users.delete()
         return HttpResponseRedirect("/")
-    return render(request,"testapp/delete.html",{'users': users})
+    return render(request,'testapp/delete.html',{'users': users})
 
