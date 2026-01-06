@@ -22,3 +22,11 @@ def success(request):
 def profileview(request,id):
     view = UserProfile.objects.all().get(id=id)
     return render(request,'testapp/view.html',{'view':view})
+
+def deleteview(request,id):
+    users = UserProfile.objects.all().get(id=id)
+    if request.method == 'POST':
+        users.delete()
+        return HttpResponseRedirect("/")
+    return render(request,"testapp/delete.html",{'users': users})
+
