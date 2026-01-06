@@ -30,3 +30,15 @@ def deleteview(request,id):
         return HttpResponseRedirect("/")
     return render(request,'testapp/delete.html',{'users': users})
 
+def updateview(request,id):
+    users = UserProfile.objects.get(id=id)
+    form = UserProfileForm(instance=users)
+
+    if request.method == "POST" :
+        form = UserProfileForm(request.POST,instance = users)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+        return render(request,'testapp/update.html',{'form': form})
+
+
