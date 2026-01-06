@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponseRedirect
+from django.shortcuts import render,HttpResponseRedirect,redirect,get_object_or_404
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -30,15 +30,20 @@ def deleteview(request,id):
         return HttpResponseRedirect("/")
     return render(request,'testapp/delete.html',{'users': users})
 
-def updateview(request,id):
-    users = UserProfile.objects.get(id=id)
-    form = UserProfileForm(instance=users)
+def updateview(request, id):
+    user = get_object_or_404(UserProfile, id=id)
 
-    if request.method == "POST" :
-        form = UserProfileForm(request.POST,instance = users)
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=user)
+
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/")
-        return render(request,'testapp/update.html',{'form': form})
+            return redirect('/')
+        else:
+            print(form.errors)
+    else:
+        form = UserProfileForm(instance=user)
+
+    return render(request, 'testapp/update.html', {'form': form})
 
 
