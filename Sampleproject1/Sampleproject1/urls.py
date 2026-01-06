@@ -25,7 +25,7 @@ urlpatterns = [
     path('register/',views.register),
     path('',views.success),
     path('profileview/<int:id>',views.profileview,name='profileview'),
-    # path('deleteview/<int:id>',views.deleteview,name='deleteview')
+    path('deleteview/<int:id>',views.deleteview,name='deleteview'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
