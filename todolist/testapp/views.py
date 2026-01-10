@@ -7,7 +7,10 @@ class AddTask(CreateView):
     model = todo
     fields = '__all__'
     template_name = "testapp/create_task.html"
+    success_url = "/home/"
 
 class home(ListView):
     model = todo
     template_name = "testapp/home.html"
+
+c
