@@ -59,13 +59,14 @@
                                 </td>
 
                                 <td>
-    <form action="{% url 'delete' task.pk %}" method="POST" style="display:inline;">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-sm btn-outline-danger">
-            <i class="fa-solid fa-trash"></i>
-        </button>
-    </form>
-</td>
+                                    <form action="{% url 'delete' task.pk %}" method="POST" style="display:inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+
                             </tr>
                             {% empty %}
                             <tr>
