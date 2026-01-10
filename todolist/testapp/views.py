@@ -7,3 +7,4 @@ class AddTask(CreateView):
     model = todo
     fields = '__all__'
     template_name = "testapp/create_task.html"
+    
