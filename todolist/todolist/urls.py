@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create/',views.AddTask.as_view(),name="AddTask"),
     path('home/',views.home.as_view(),name = "home"),
+    path('delete/<int:pk>/',views.Delete.as_view(),name = "delete"),
 ]

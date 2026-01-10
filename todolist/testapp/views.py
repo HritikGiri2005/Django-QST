@@ -13,4 +13,6 @@ class home(ListView):
     model = todo
     template_name = "testapp/home.html"
 
-c
+class Delete(DeleteView):
+    model = todo
+    success_url = "/home/"
