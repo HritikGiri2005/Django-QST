@@ -5,4 +5,4 @@ from .models import todo
 class todolist(admin.ModelAdmin):
     list_display = ('task_name','date_created')
 
-admin.site.register(todo)
+admin.site.register(todo,todolist)
