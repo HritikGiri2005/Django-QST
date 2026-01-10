@@ -5,4 +5,5 @@ from django.views.generic import CreateView,DeleteView,UpdateView,ListView
 # Create your views here.
 class AddTask(CreateView):
     model = todo
-    template_name = "create_task.html"
+    fields = '__all__'
+    template_name = "testapp/create_task.html"
