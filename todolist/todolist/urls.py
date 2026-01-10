@@ -20,5 +20,6 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create/',views.AddTask.as_view(),name="AddTask")
+    path('create/',views.AddTask.as_view(),name="AddTask"),
+    path('',views.home.as_view(),name = "Home"),
 ]
