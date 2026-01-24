@@ -14,8 +14,6 @@ def nameview(request):
     return render(request,'testapp/name.html')
 
 
-
-
 def ageview(request):
     if request.method == 'POST':
         age = request.POST.get('age')
