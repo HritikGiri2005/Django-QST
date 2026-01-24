@@ -7,3 +7,6 @@
 ---------------------------------Templates--------------------------------------
 -Template literals/Template tag
 
+------------------------------------Cookies-----------------------------------------
+can be implemented using session-API or Cookies
+
