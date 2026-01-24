@@ -6,7 +6,7 @@
     <title>name</title>
 </head>
 <body>
-    <form method="post" action=" ">
+    <form method="post" action="{% url ' '%}">
     {% csrf_token %}
     Name: <input type="text" name="name">
     <button type="submit">Next</button>
