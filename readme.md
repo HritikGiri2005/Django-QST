@@ -10,3 +10,14 @@
 ------------------------------------Cookies-----------------------------------------
 can be implemented using session-API or Cookies
 
+setting data into cookie object:
+response.set_cookie(key,value)
+
+How to read data from cookie object:
+value = request.cookies['key']
+or 
+'key' in request.cookies:
+
+
+
+
