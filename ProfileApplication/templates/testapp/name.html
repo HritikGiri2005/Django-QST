@@ -6,6 +6,9 @@
     <title>name</title>
 </head>
 <body>
-    
+    <form method="post" action=" ">
+    {% csrf_token %}
+    Name: <input type="text" name="name">
+    <button type="submit">Next</button>
 </body>
 </html>

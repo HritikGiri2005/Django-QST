@@ -20,4 +20,8 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.nameview,name='name'),
+    path('age/',views.ageview,name='age'),
+    path('qualification/',views.qualificationview,name='qualification'),
+    path('result/',views.resultview,name='result'),
 ]

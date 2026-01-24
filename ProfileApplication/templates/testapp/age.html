@@ -6,6 +6,10 @@
     <title>age</title>
 </head>
 <body>
-    
+    <form method="post" action="/age/">
+    {% csrf_token %}
+    Age: <input type="number" name="age">
+    <button type="submit">Next</button>
+</form>
 </body>
 </html>
