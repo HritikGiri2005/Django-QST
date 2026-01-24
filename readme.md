@@ -14,9 +14,9 @@ setting data into cookie object:
 response.set_cookie(key,value)
 
 How to read data from cookie object:
-value = request.cookies['key']
+value = request.COOKIES['key']
 or 
-'key' in request.cookies:
+'key' in request.COOKIES:
 
 
 
