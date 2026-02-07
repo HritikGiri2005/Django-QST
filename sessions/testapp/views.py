@@ -15,7 +15,6 @@ def show_mobile(request):
     mobiles = request.session.get('mobiles', [])
     return render(request, 'show.html', {'mobiles': mobiles})
 
-
 def add_mobile(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
