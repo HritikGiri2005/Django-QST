@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h2>mobile diary</h2>
+
+<div>
+    <a href="{% url 'show' %}">Show</a>
+    <a href="{% url 'add' %}">Add</a>
+</div>
+
+<p>Store Mobile contacts using sessions</p>
+{% endblock  %}
