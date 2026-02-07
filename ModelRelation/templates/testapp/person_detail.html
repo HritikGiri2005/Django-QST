@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Detail</title>
+</head>
+<body>
+
+<h2>Person Details</h2>
+
+<p><strong>Name:</strong> {{ person.name }}</p>
+<p><strong>Age:</strong> {{ person.age }}</p>
+<p><strong>Aadhar Number:</strong> {{ person.aadharcard.number }}</p>
+
+<br>
+<a href="{% url 'person_list' %}">Back to List</a>
+
+</body>
+</html>

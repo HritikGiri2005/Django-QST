@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person List</title>
+</head>
+<body>
+
+<h2>All Persons</h2>
+
+<a href="{% url 'create_person' %}">Add New Person</a>
+
+<hr>
+
+{% for person in persons %}
+    <p>
+        <strong>Name:</strong> {{ person.name }} <br>
+        <strong>Age:</strong> {{ person.age }} <br>
+        <strong>Aadhar:</strong> {{ person.aadharcard.number }} <br>
+
+        <a href="{% url 'person_detail' person.id %}">
+            View Details
+        </a>
+    </p>
+    <hr>
+{% empty %}
+    <p>No records found.</p>
+{% endfor %}
+
+</body>
+</html>

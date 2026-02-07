@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Person</title>
+</head>
+<body>
+
+<h2>Create Person</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" name="age" required><br><br>
+
+    <label>Aadhar Number:</label><br>
+    <input type="number" name="aadhar" required><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="{% url 'person_list' %}">View All Persons</a>
+
+</body>
+</html>
